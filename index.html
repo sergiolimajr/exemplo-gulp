@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title> ToDo </title>
+  <!-- [CSS] -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- [SCRIPT] -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</head>
+<body ng-app="app" ng-controller="appCtrl">
+  <h2>{{title}}</h2>
+  <input class="form-control" placeholder="Search" ng-model="searchContact" type="text" />
+  <p>*Search a name or phone number</p>
+
+  <table id="searchContacts" class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Phone number</th>
+    </tr>
+    <tr ng-repeat="contact in contacts | filter:searchContact" ng-animate="{enter:'animate-enter', leave: 'animate-leave'}">
+      <td>{{contact.name}}</td>
+      <td>{{contact.number}}</td>
+    </tr>
+  </table>
+  <footer>
+    Leading off the study AngularJS | by: <a target="_blank" href="https://facebook.com/SergioLimaJ"><strong>SergioLimaJ</strong></a> /
+    <a target="_blank" href="https://github.com/sergiolimajr"><strong>@sergiolimajr</strong></a> /
+    <a target="_blank" href="https://twitter.com/nunodev"><strong>@nunodev</strong></a>
+  </footer>
+</body>
+</html>

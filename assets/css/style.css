@@ -1,0 +1,26 @@
+.form-control,
+.table tr th,
+footer,
+h2,
+p,
+td {
+  text-align: center;
+}
+
+.form-control {
+  max-width: 300px;
+  margin: 50px auto 0;
+}
+
+p {
+  color: #AEAEAE;
+}
+
+.table {
+  width: 600px!important;
+  margin: 40px auto 0;
+}
+
+footer {
+  margin-top: 20px;
+}
